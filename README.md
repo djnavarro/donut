@@ -1,7 +1,7 @@
 
 # donut
 
-<img src="http://donut.djnavarro.net" width="80%">
+http://donut.djnavarro.net
 
 - `server.R`: script specifying a simple plumber API
 - `Dockerfile`: specifies the image 
