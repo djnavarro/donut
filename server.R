@@ -88,7 +88,6 @@ donut <- function(seed) {
   pic
 }
 
-
 #* draws a donut plot
 #* @serializer svg list(width = 10, height = 10)
 #* @get /

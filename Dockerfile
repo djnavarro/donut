@@ -7,5 +7,5 @@ LABEL org.opencontainers.image.licenses "MIT"
 
 RUN Rscript -e 'install.packages(c("ggplot2", "scales", "tibble", "dplyr", "plumber", "ggthemes"))'
 COPY server.R /home/server.R
-EXPOSE 80
-CMD Rscript -e 'plumber::plumb(file="/home/server.R")$run(host="0.0.0.0", port = 80)'
+EXPOSE 8080
+CMD Rscript -e 'plumber::plumb(file="/home/server.R")$run(host="0.0.0.0", port = 8080)'
