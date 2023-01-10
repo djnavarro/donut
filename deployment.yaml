@@ -17,6 +17,7 @@ spec:
       containers:
         - name: donut
           image: ghcr.io/djnavarro/donut:main
+          imagePullPolicy: Always
           resources:
             requests:
               memory: "64Mi"
