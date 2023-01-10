@@ -44,7 +44,7 @@ donut_style <- function(data = NULL, palette) {
       oob = scales::oob_keep
     ) +
     ggplot2::scale_colour_gradientn(colours = palette) +
-    ggplot2::scale_linewidth(range = c(0, 4)) +
+    ggplot2::scale_linewidth(range = c(0, 6)) +
     ggplot2::theme_void() +
     ggplot2::theme(
       panel.background = ggplot2::element_rect(
@@ -62,8 +62,8 @@ donut_style <- function(data = NULL, palette) {
 # generator for a donut plot
 donut <- function(seed) {
 
-  dat <- sample_data(n = 1000, seed = seed) |>
-    dplyr::mutate(y1 = y0, size = size / 4)
+  dat <- sample_data(n = 200, seed = seed) |>
+    dplyr::mutate(y1 = y0, size = size / 3)
 
   line_spec <- sample(c("331311", "11", "111115"), 1)
 
@@ -88,8 +88,9 @@ donut <- function(seed) {
   pic
 }
 
+
 #* draws a donut plot
-#* @serializer png list(width = 800, height = 800, res = 300)
+#* @serializer svg list(width = 10, height = 10)
 #* @get /
 function(seed = NA) {
   if(is.na(seed)) {
